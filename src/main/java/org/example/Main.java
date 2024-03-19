@@ -8,6 +8,7 @@ public class Main {
         // TASK 2.a
 
         JSONPlaceholderFetcher postFetcher = new JSONPlaceholderFetcher();
+        JSONMapper jsonMapper = new JSONMapper();
 
         HttpResponse<String> response = postFetcher.getSinglePost(1);
         System.out.println("TASK 2.a");
@@ -42,6 +43,11 @@ public class Main {
             System.out.println("Operation has NOT been successful!");
         }
 
-
+        // Task 3.b
+        System.out.println();
+        System.out.println("TASK 3.b");
+        HttpResponse<String> response3 = postFetcher.getSinglePost(1);
+        Post post = JSONMapper.convertJSONToPost(response3.body());
+        System.out.println(post);
     }
 }
