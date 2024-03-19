@@ -33,6 +33,8 @@ public class Main {
                 "  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n" +
                 "}");
         int answer = response2.statusCode();
+        System.out.println(response2.statusCode());
+        System.out.println(response2.body());
 
         if (answer == 200 || answer == 201) {
             System.out.println("Operation has been successful!");
