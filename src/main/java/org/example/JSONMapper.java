@@ -15,7 +15,7 @@ public static Post convertJSONToPost(String postJSON) {
 
     try {
         JsonNode node = MAPPER.readTree(postJSON);
-        // post.setUserID(node.get("userID").longValue());
+
         post.setId(node.get("id").longValue());
         post.setTitle(node.get("title").textValue());
         post.setBody(node.get("body").textValue());
@@ -28,5 +28,5 @@ return post;
 }
 
 
-// wyjątki - kiedy surround a kied add to method?
+// wyjątki - kiedy surround a kiedy add to method?
 }
