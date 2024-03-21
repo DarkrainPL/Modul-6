@@ -43,11 +43,11 @@ public class Main {
             System.out.println("Operation has NOT been successful!");
         }
 
-        // Task 3.b
+        // Task 3.c
         System.out.println();
-        System.out.println("TASK 3.b");
+        System.out.println("TASK 3.c");
         HttpResponse<String> response3 = postFetcher.getSinglePost(1);
-        Post post = JSONMapper.convertJSONToPost(response3.body());
+        Post post = JSONMapper.convertJSONToPost(response3.body()); // przemapowałem obiektJSON na jave
         System.out.println(post);
     }
 }

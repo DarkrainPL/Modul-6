@@ -8,7 +8,8 @@ public class Post {
     private String title;
     private String body;
 
-    public Post() {}
+    public Post() {
+    }
 
     public Post(long userID, long id, String title, String body) {
         this.userID = userID;
