@@ -1,6 +1,7 @@
 package org.example;
 
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,6 @@ public class Main {
         // TASK 2.a
 
         JSONPlaceholderFetcher postFetcher = new JSONPlaceholderFetcher();
-        JSONMapper jsonMapper = new JSONMapper();
 
         HttpResponse<String> response = postFetcher.getSinglePost(1);
         System.out.println("TASK 2.a");
@@ -49,5 +49,32 @@ public class Main {
         HttpResponse<String> response3 = postFetcher.getSinglePost(1);
         Post post = JSONMapper.convertJSONToPost(response3.body()); // przemapowałem obiektJSON na jave
         System.out.println(post);
+
+        // Task 4
+
+        System.out.println();
+        System.out.println("TASK 4");
+        System.out.println();
+        System.out.println("Single post as Post");
+        Post response4 = postFetcher.getSinglePostB(1);
+        System.out.println(response4);
+        System.out.println("Get all post as array list");
+        ArrayList<Post> response5 = postFetcher.getAllPostsB();
+        System.out.println(response5);
+
+
+        // Task 5
+        System.out.println();
+        System.out.println("TASK 5");
+        Post postJson = new Post();
+
+        postJson.setId(1);
+        postJson.setUserID(1);
+        postJson.setBody("cogito ergo sum");
+        postJson.setTitle("zarcik");
+
+        String stringJson = JSONMapper.convertPostToJson(postJson);
+        System.out.println(stringJson);
     }
+
 }
