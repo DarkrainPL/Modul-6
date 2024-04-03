@@ -47,7 +47,7 @@ public class Main {
         System.out.println();
         System.out.println("TASK 3.c");
         HttpResponse<String> response3 = postFetcher.getSinglePost(1);
-        Post post = JSONMapper.convertJSONToPost(response3.body()); // przemapowałem obiektJSON na jave
+        Post post = JSONMapper.convertJSONToPost(response3.body());
         System.out.println(post);
 
         // Task 4
