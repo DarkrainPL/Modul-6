@@ -57,7 +57,7 @@ public class JSONPlaceholderFetcher {
         ArrayList<Post> listPost = new ArrayList<>();
         JSONPlaceholderFetcher postFetcher = new JSONPlaceholderFetcher();
 
-        for (int i = 1; i<100; i++) { // skąd wiedzieć, że tych postów jest 100? tu akurat wiem to z reki wpisałem ale jak to wyciągnąć?
+        for (int i = 1; i<100; i++) {
             Post response = postFetcher.getSinglePostB(i);
             listPost.add(response);
         }
